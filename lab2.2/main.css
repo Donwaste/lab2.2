@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
+  
+  .background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ship-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+  
+  .ship {
+    width: 100px;
+    transition: transform 2s ease-in-out;
+  }
+  
+  .ship-container:hover .ship {
+    transform: translateX(200px);
+  }
+  
+  .meteor {
+    position: absolute;
+    top: -200px;
+    width: 30px;
+    animation: fall 3s linear infinite;
+  }
+  
+  .meteor:nth-child(3) {
+    left: 20%;
+    animation-delay: 1s;
+  }
+  
+  .meteor:nth-child(4) {
+    left: 50%;
+    animation-delay: 2s;
+  }
+  
+  .meteor:nth-child(5) {
+    left: 80%;
+    animation-delay: 3s;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 100vh;
+    }
+  }
+  
+  .ship-container:hover .ship {
+    transform: translateX(1200px);
+  }
+
+  .star {
+    position: absolute;
+    top: 200px;
+    right: -50px;
+    animation: fly-left 5s linear infinite;
+}
+
+@keyframes fly-left {
+    0% {
+        right: -50px;
+    }
+    100% {
+        right: 100vw
+    }
+}
+  
